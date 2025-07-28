@@ -1,0 +1,7 @@
+streamlit
+requests
+fastapi
+uvicorn
+google-generativeai
+PyPDF2
+python-multipart
