@@ -25,7 +25,7 @@ It uses Google Gemini AI for threat analysis, backed by a FastAPI backend and an
 | **Backend**  | FastAPI                  |
 | **AI Engine**| Google Gemini Pro API    |
 | **Language** | Python                   |
-| **Utilities**| PyMuPDF, python-dotenv   |
+| **Utilities**| PyPDF2                   |
 
 ---
 
@@ -34,7 +34,7 @@ It uses Google Gemini AI for threat analysis, backed by a FastAPI backend and an
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/PagarwaL003/Threat-Guard
 cd URL_File_Detection
 ```
 
@@ -65,16 +65,19 @@ Open a new terminal and run:
 streamlit run app.py
 ```
 
-### 6. Access the App
+---
 
-Go to [http://localhost:8501](http://localhost:8501) in your browser.
+🌐 Access the App
+Once running, open your browser and go to:
+
+http://localhost:8501
 
 ---
 
 ## File Structure
 
 ```
-Malicious URL Detection/
+URL_File_Detection/
 │
 ├── app.py          # Streamlit UI
 ├── main.py         # FastAPI backend
@@ -84,19 +87,27 @@ Malicious URL Detection/
 
 ---
 
-## Usage
+# 📌 Usage Guide
 
-- **Malicious File Detection:**  
-  Upload a PDF or TXT file containing email or message content. The app will analyze and tell you if it's a scam or legitimate.
-
-- **URL Threat Detection:**  
-  Enter a URL (with http:// or https://). The app will classify the URL as benign, phishing, malware, or defacement.
+### 🔍 Scam Email Detection  
+Upload a `.pdf` or `.txt` file containing email content.  
+The AI will analyze and classify it as **Scam** or **Legit**.
 
 ---
 
-## Notes
+### 🧪 URL Threat Detection  
+Enter a full URL (e.g., `https://example.com`).  
+The app will return one of the following:  
+- ✅ Benign  
+- ❗ Phishing  
+- 🛑 Malware  
+- 🚨 Defacement
 
-- Make sure your FastAPI backend is running before using the Streamlit UI.
-- The app requires a valid Google Gemini API key to function.
+---
+
+### 🔐 Notes  
+- Ensure the **FastAPI server (`main.py`) is running** before launching the **Streamlit UI**.  
+- A valid **Google Gemini API key** is required for detection features.  
+- This is an **experimental project** — do not use it in production without proper security testing.
 
 ---
