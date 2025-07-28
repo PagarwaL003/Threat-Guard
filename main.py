@@ -5,7 +5,9 @@ from pydantic import BaseModel
 import google.generativeai as genai
 import PyPDF2
 
-os.environ["GOOGLE_API_KEY"] = "AIzaSyAuio228ib9ikNGQzBzriSAJKnmpMpE_bU"
+os.environ["GOOGLE_API_KEY"] = "YOUR_GOOGLE_API_KEY"  # Replace with your actual API key
+if "GOOGLE_API_KEY" not in os.environ:
+    raise ValueError("GOOGLE_API_KEY environment variable is not set.")
 genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
 model = genai.GenerativeModel("gemini-1.5-flash")
 
